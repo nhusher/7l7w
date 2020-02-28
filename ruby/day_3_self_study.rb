@@ -46,14 +46,14 @@ module ActsAsCsv
   end
 end
 
-class RubyCsv  # no inheritance! You can mix it in
+class DayThreeSelfStudy  # no inheritance! You can mix it in
   include ActsAsCsv
   acts_as_csv
 end
 
-m = RubyCsv.new
-puts m.headers.inspect
-puts m.csv_contents.inspect
+m = DayThreeSelfStudy.new
+# puts m.headers.inspect
+# puts m.csv_contents.inspect
 
 m.each { |row| puts row.one }
 m.each { |row| puts row.two }
